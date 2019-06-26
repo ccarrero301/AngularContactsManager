@@ -12,13 +12,16 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { UserService } from './services/user.service';
 import { NotesComponent } from './components/notes/notes.component';
+import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
 
 const routes: Routes = [
-  { path: '', component: ContactmanagerAppComponent,
+  {
+    path: '', component: ContactmanagerAppComponent,
     children: [
       { path: ':id', component: MainContentComponent },
       { path: '', component: MainContentComponent }
-    ] },
+    ]
+  },
   { path: '**', redirectTo: '' }
 ];
 
@@ -37,9 +40,15 @@ const routes: Routes = [
     ToolbarComponent,
     MainContentComponent,
     SidenavComponent,
-    NotesComponent],
+    NotesComponent,
+    NewContactDialogComponent
+  ],
 
-    providers: [
+  entryComponents: [
+    NewContactDialogComponent
+  ],
+
+  providers: [
     UserService
   ]
 })
