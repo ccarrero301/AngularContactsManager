@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
-import { MatIconRegistry } from "@angular/material";
-import { DomSanitizer } from "@angular/platform-browser";
+import { Component, OnInit } from '@angular/core';
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: "app-contactmanager-app",
+  selector: 'app-contactmanager-app',
   template: `
     <app-sidenav></app-sidenav>
   `,
@@ -12,7 +12,7 @@ import { DomSanitizer } from "@angular/platform-browser";
 export class ContactmanagerAppComponent implements OnInit {
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIconSet(
-      sanitizer.bypassSecurityTrustResourceUrl("assets/avatars.svg")
+      sanitizer.bypassSecurityTrustResourceUrl('assets/avatars.svg')
     );
   }
 
