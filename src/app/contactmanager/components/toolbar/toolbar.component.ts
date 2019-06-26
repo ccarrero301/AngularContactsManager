@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class ToolbarComponent implements OnInit {
 
   @Output() toggleSidenav = new EventEmitter<void>();
+  @Output() toogleTheme = new EventEmitter<void>();
 
   constructor(
     private dialog: MatDialog,
